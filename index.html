@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.js">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+         .banner-image {
+            background-image: url('images/1.png');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+        }
+
+        nav {
+            transition: background-color 0.3s ease;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            margin: 0 10px;
+        }
+
+        .bg-dark {
+            background-color: maroon !important;
+        }
+
+        .shadow {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+        }
+        .card-img-top {
+            object-fit: cover; /* Maintain aspect ratio */
+            height: 350px; /* Set desired height */
+            width: 100%; /* Ensure full width */
+            
+        }
+        .card-custom {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img-top-custom {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .card-body-custom {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title-custom {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .card-text-custom {
+            color: #6c757d;
+        }
+
+        .btn-custom {
+            background-color:maroon;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: maroon;
+        }
+        .bg-maroon {
+    background-color: #800000;
+  }
+    </style>
+</head>
+<body>
+    <!--<div class="container-fluid" style="background-color:maroon; text-align: center;" >
+        <p style="color: white;" style="justify-content: center;">DESIGN YOUR DREAM HOUSE</p>
+    </div>-->
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: maroon;">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">HOMESTYLE</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link text-white">About</a></li>
+               <li class="nav-item"><a href="feedback.html" class="nav-link text-white">Feedback</a></li>
+                <li class="nav-item"><a href="Contact.html" class="nav-link text-white">Contact</a></li>
+                <li class="nav-item"><a href="rating.html" class="nav-link text-white">Reviews & Ratings</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                  Catagories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="serch.html">Searching, Sorting, and Filtering</a></li>
+                      <li><a class="dropdown-item" href="view.html">Viewing Design Styles
+                      <li><a class="dropdown-item" href="#"> Professional Interior Designers GalleryTop Designers</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                    Browsing Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Furniture</a></li>
+                      <li><a class="dropdown-item" href="#">Lighting</a></li>
+                      <li><a class="dropdown-item" href="#">Decor</a></li>
+                      <li><a class="dropdown-item" href="#">Kitchen</a></li>
+                      <li><a class="dropdown-item" href="#">Bathroom</a></li>
+                    </ul>
+                  </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Banner Image -->
+<div class="banner-image">
+    <div class="content">
+        <h1 class="text-white"></h1>
+    </div>
+</div>
+
+<!-- Main Content Area -->
+<div class="container my-5">
+    <div class="p-5 border">
+        <p>
+            <!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium dignissimos fugit esse odit laborum.
+            Commodi blanditiis deleniti odio fugiat corrupti, mollitia tempora libero deserunt nemo, delectus veritatis vel
+            numquam.
+        </p>
+    </div>
+    <div class="p-5 border">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium dignissimos fugit esse odit laborum.
+            Commodi blanditiis deleniti odio fugiat corrupti, mollitia tempora libero deserunt nemo, delectus veritatis vel
+            numquam.
+        </p>
+    </div>
+    <div class="p-5 border">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium dignissimos fugit esse odit laborum.
+            Commodi blanditiis deleniti odio fugiat corrupti, mollitia tempora libero deserunt nemo, delectus veritatis vel
+            numquam.
+        </p>
+    </div>
+    <div class="p-5 border">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laudantium dignissimos fugit esse odit laborum.
+            Commodi blanditiis deleniti odio fugiat corrupti, mollitia tempora libero deserunt nemo, delectus veritatis vel
+            numquam.
+        </p>
+    </div>
+</div>-->
+
+<!-- JavaScript for Navbar Scroll Effect -->
+<script>
+    var nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            nav.classList.add('bg-dark', 'shadow');
+        } else {
+            nav.classList.remove('bg-dark', 'shadow');
+        }
+    });
+</script>
+<div class="d-grid gap-2">
+    <button class="btn" type="button" style="background-color: maroon; color: white; height: 70px; font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Shop By Catagories</button>
+</div>
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="images/SOFA.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">SOFA SETS</h5>
+                   <a href="#" class="btn btn-custom" style="background-color: maroon;">DESIGN</a>
+                </div>
+            </div>
+        </div>
+         <!-- Card 2 -->
+         <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="images/BSD.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">BED SET</h5>
+                    <a href="#" class="btn btn-custom" style="background-color: maroon;">DESIGN</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="images/DINIG.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">DINING TABLE</h5>
+                    <a href="#" class="btn btn-custom" style="background-color: maroon;">DESIGN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-grid gap-2">
+    <button class="btn" type="button" style="background-color: maroon; color: white; height: 70px; font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">BED SET</button>
+</div>
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/1.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                <div class="card-body card-body-custom">
+                    <h6 class="card-title card-title-custom">Bed Set 1</h6>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                   <a href="bed1.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+            
+                </div>
+            </div>
+        </div>
+         <!-- Card 2 -->
+         <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/2.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">Bed Set 2</h5>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                    <a href="bed2.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/10.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">Bed Set 3</h5>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨ 275,000.00.</p>
+                    <a href="bed3.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/4.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                <div class="card-body card-body-custom">
+                    <h6 class="card-title card-title-custom">Bed Set 4</h6>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 330,000.00</del> ₨275,000.00.</p>
+                   <a href="bed4.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                  
+                </div>
+            </div>
+        </div>
+         <!-- Card 2 -->
+         <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/5.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">Bed Set 5</h5>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del>₨350,000.00</del> ₨295,000.00</p>
+                    <a href="bed5.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/6.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">Bed Set 6</h5>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del>₨ 290,000.00</del> ₨ 245,000.00.</p>
+                    <a href="bed6.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/7.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                <div class="card-body card-body-custom">
+                    <h6 class="card-title card-title-custom">Bed Set 7</h6>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del>₨ 365,000.00 </del>₨ 325,000.00.</p>
+                   <a href="bed7.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                  
+                </div>
+            </div>
+        </div>
+         <!-- Card 2 -->
+         <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/8.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">Bed Set 8</h5>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del>₨ 235,000.00 </del>₨ 190,000.00</p>
+                    <a href="bed8.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-custom">
+                <img src="beds and matteresses/9.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                <div class="card-body card-body-custom">
+                    <h5 class="card-title card-title-custom">Bed Set 9</h5>
+                    <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del>₨ ₨275,000.00</del>₨ 220,000.00.</p>
+                    <a href="bed9.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="d-grid gap-2">
+    <button class="btn" type="button" style="background-color: maroon; color: white; height: 70px; font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SOFA SET</button>
+</div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/1.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Sofa Set 1</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 180,000.00.</del>₨ 149,500.00. </p>
+                       <a href="sofa1.html" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/2.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Sofa Set 2</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 175,000.00</del>₨ 149,500.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/3.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Sofa Set 3</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/4.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Sofa Set 4</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/5.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Sofa Set 5</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/6.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Sofa Set 6</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/7.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Sofa Set 7</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/s.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Sofa Set 8</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="sofas/9.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Sofa Set 9</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn" type="button" style="background-color: maroon; color: white; height: 70px; font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">TABLE SET</button>
+    </div>
+    <div class="container py-5"></div>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/1.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Table Set  1</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 180,000.00.</del>₨ 149,500.00. </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/2.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Table Set  2</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 2000000</del> ₨ 180,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/3.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Table Set  3</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/4.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Table Set 4</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/5.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Table Set 5</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/6.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Table Set 6</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/7.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Table Set 7</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/8.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Table Set 8</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="tables/9.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Table Set 9</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn" type="button" style="background-color: maroon; color: white; height: 70px; font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">CHAIRS & RECLINERSSET</button>
+    </div>
+    
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/2.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom"> Chairs & Recliners 1</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 180,000.00.</del>₨ 149,500.00. </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/3.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom"> Chairs & Recliners 2</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 2000000</del> ₨ 180,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/4.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Chairs & Recliners3</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/5.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom"> Chairs & Recliners 4</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/6.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom"> Chairs & Recliners 5</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/7.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Chairs & Recliners 6</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/8.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Chairs & Recliners 7</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/9.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Chairs & Recliners 8</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="chairs and recliners/10.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Chairs & Recliners 9</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn" type="button" style="background-color: maroon; color: white; height: 70px; font-size: 40px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">STORAGE</button>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/1.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Storage 1</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 180,000.00.</del>₨ 149,500.00. </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/2.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Storage 2</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 2000000</del> ₨ 180,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/3.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Storage 3</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/4.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Storage 4</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/5.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Storage 5</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/6.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Storage 6</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/7.jpg" class="card-img-top card-img-top-custom" alt="Card 1 Image">
+                    <div class="card-body card-body-custom">
+                        <h6 class="card-title card-title-custom">Storage 7</h6>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><del>₨ 325,000.00</del> ₨290,000.00 </p>
+                       <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                
+                    </div>
+                </div>
+            </div>
+             <!-- Card 2 -->
+             <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/8.jpg" class="card-img-top card-img-top-custom" alt="Card 2 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Storage 8</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 4250000</del> ₨ 325,000.00 </p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card card-custom">
+                    <img src="storage/9.jpg" class="card-img-top card-img-top-custom" alt="Card 3 Image">
+                    <div class="card-body card-body-custom">
+                        <h5 class="card-title card-title-custom">Storage 9</h5>
+                        <p class="product-price" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> <del> ₨ 325,000.00</del> ₨275,000.00.</p>
+                        <a href="#" class="btn btn-custom" style="background-color: maroon;">DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Details -->
+<section class="container my-5">
+<div class="row">
+    <div class="col-lg-6">
+        <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Transform Your Home with Stylish furniture</h1>
+        <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">We specialize in stylish and functional furniture for bedrooms, living rooms, dining areas, offices, and outdoor spaces. Each piece is crafted with meticulous attention to detail and superior craftsmanship, ensuring durability and timeless elegance. Whether you lean towards modern minimalism or classic sophistication, HomeInterior offers furniture that enhances your home décor to reflect your personal style. Explore our collections and create a home that fits your lifestyle perfectly.</p>
+
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">.Stylish and useful furniture for every room.</p>
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">. Carefully made with high-quality materials.</p>
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">. Built to last and look good over time.</p>
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">. Choices for both modern and classic styles.</p>
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">. Furniture that matches your home and personal tast</p>
+            <a href="#" class="btn btn-custom" style="background-color: maroon;">Discovery Now</a>
+    </div>
+    <div class="col-lg-6">
+        <img src="images/123.jpg" class="img-fluid" style="width: 500px; height: 500px;" alt="Elegant Dress">
+    </div>
+</div>
+</section>
+  <!-- Product Details -->
+<section class="container my-5">
+<div class="row">
+    <div class="col-lg-6">
+        <img src="images/1234.jpg" class="img-fluid" style="width: 500px; height: 500px;" alt="Elegant Dress">
+    </div>
+    <div class="col-lg-6">
+        <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Why Choose HomeInterior?</h1>
+        <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">At HomeInterior, we offer more than just furniture. We focus on quality and customer satisfaction, providing a wide range of stylish and durable bedroom furniture, sofas, living room essentials, and dining tables. We make luxury affordable without compromising on quality. Our dedicated customer service ensures a seamless experience from selection to delivery.</p>
+
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">.Quality Craftsmanship.</p>
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">. Quality Craftsmanship.</p>
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">. Customization Options.</p>
+            <p style="font-size: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">. Reliable Shipping.</p>
+            <a href="#" class="btn btn-custom" style="background-color: maroon;">Discovery Now</a>
+    </div>
+    
+</div>
+</section>
+    <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: black; font-style: italic">Transform Your Living Space Explore Premium Home Furniture in Pakistan by Home Interior</h2>
+       <p>Your home is more than a place to live. It is a reflection of your lifestyle, taste and personality. The furniture you pick plays a notable part in defining the look and comfort of the living space in Pakistan. The fusion of custom and modernity makes a remarkable blend of home interior design. So selecting the right home furniture in Pakistan can change your house into a home. Home Interior is one of the leading names in the home furniture sector in Pakistan. Here, we offer a broad range of top notch furniture that caters to every taste. Hence it ensures that every home can achieve its maximum potential.</p>
+       <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: black; font-style: italic">Home Furniture Pakistan Elevate Your Home with Stylish</h2>
+       <p>Furniture is not only about filling space in the home. It is about making the home comfortable and beautiful. Whether you have a small space or a big house in Pakistan, Home Interior offers lots of choices of furniture design in Pakistan that mix style with usage. Here you will find everything from modern designs to classic looks. Home Interior has furniture that can make every part of the home look great.</p>
+       <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: black; font-style: italic">Living Room Furniture</h2>
+       <p>The living room is where your family and friends gather. Hence it makes it one of the most vital spaces in the home.  So here at Home Interior you will find a variety of sofas, TV stands and coffee tables that are both comfy and stylish. So here you will find fancy, classic and modern furniture in Lahore and all other cities in Pakistan within your budget.</p>
+       <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: black; font-style: italic">Bedroom Furniture</h2>
+       <p>Your bedroom is you the r personal space where you rest after a long day. Home Interior offers bedroom furniture that looks great. Besides this we designed it to last. From comfy beds to large wardrobes and stylish dresses we offer unique and new style furniture in Pakistan.</p>
+       <h2 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: black; font-style: italic">Dining Room Furniture</h2>
+       <p>The dining room is where your family comes together to eat and share stories. The dining room collection from Home Interior consists of tables, chairs and cabinets that add a touch of class to the home.</p>
+       <hr>
+        <br>
+   <!-- Footer -->
+<div class="container-fluid my-5">
+    <footer class="text-white text-center text-lg-start" style="background-color: #800000;">
+        <div class="container p-4">
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-12 mb-4">
+                    <h5 class="text-uppercase mb-4">About Homestyle</h5>
+                    <p>Welcome to Homestyle – Your one-stop destination for personalized home décor and interior inspiration!</p>
+                    <div class="mt-4">
+                        <a class="btn btn-floating btn-lg" style="color: white; background-color: #3b5998;"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-floating btn-lg" style="color: white; background-color: #ea4c89;"><i class="fab fa-dribbble"></i></a>
+                        <a class="btn btn-floating btn-lg" style="color: white; background-color: #55acee;"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-floating btn-lg" style="color: white; background-color: #dd4b39;"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
+                    <div class="form-outline form-white mb-4">
+                        <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                        <label class="form-label" for="formControlLg">Search</label>
+                    </div>
+                    <ul class="fa-ul" style="margin-left: 1.65em;">
+                        <li class="mb-3"><span class="fa-li"><i class="fas fa-home"></i></span> New York, NY 10012, US</li>
+                        <li class="mb-3"><span class="fa-li"><i class="fas fa-envelope"></i></span> info@example.com</li>
+                        <li class="mb-3"><span class="fa-li"><i class="fas fa-phone"></i></span> +01 234 567 88</li>
+                        <li class="mb-3"><span class="fa-li"><i class="fas fa-print"></i></span> +01 234 567 89</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+                    <table class="table text-center text-white">
+                        <tbody>
+                            <tr>
+                                <td>Mon - Fri:</td>
+                                <td>8am - 9pm</td>
+                            </tr>
+                            <tr>
+                                <td>Sat - Sun:</td>
+                                <td>8am - 1am</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Homestyle
+        </div>
+    </footer>
+</div>
+
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 50) { 
+            $('.navbar-dark').addClass('scrolled');
+        } else {
+            $('.navbar-dark').removeClass('scrolled');
+        }
+    });
+</script>
+</body>
+</html>
